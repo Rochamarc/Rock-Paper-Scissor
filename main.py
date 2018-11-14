@@ -1,5 +1,6 @@
 from kivy.app import App 
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.screenmanager import ScreenManager, Screen
 from random import choice
 from time import sleep
 
@@ -7,7 +8,27 @@ player_points = 0
 pc_points = 0
 match = 1
 
-class Interface (BoxLayout):
+class Gerenciador (ScreenManager):
+       
+    def GetDev(self):
+
+        self.ids.lbl_up.text = ''
+        self.ids.lbl_up.text = 'Development by Marcos Rocha'
+    
+    def GetVersion(self):
+        
+        self.ids.lbl_up.text = ''
+        self.ids.lbl_up.text = 'Version 0.3'
+
+    def GetGer(self):
+        
+        return Gerenciador()
+
+class Credits (Screen):
+    pass
+ 
+
+class Interface (Screen):
 
     def Wait (self):
 
@@ -122,7 +143,7 @@ class Test (App):
     
     def build (self):
 
-        return Interface()
+        return Gerenciador()
 
 
 Test().run()

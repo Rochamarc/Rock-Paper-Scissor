@@ -1,33 +1,85 @@
+<Gerenciador>:
+    Screen:
+        name: 'gerenciador'
+        BoxLayout:
+            
+            orientation: 'vertical'
+            Button:
+                text: "Start"
+                font_size: 40
+                on_press: root.current = 'interface'
+            
+            Button:
+                text: "Credits"
+                font_size: 40
+                on_press: root.current = 'credits'
+    
+    Interface:
+        name: 'interface'
+    
+    Credits:
+        name: 'credits'
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Label:
+            
+                id: lbl_up
+                text: ''
+                font_size: 40
+            Button:
+
+                id: version
+                text: 'Game Version'
+                font_size: 40
+                on_release: root.GetVersion()
+            Button:
+
+                id: creator
+                text: 'Development'
+                font_size: 40
+                on_release: app.root.GetDev()
+            Button: 
+
+                id: go_out
+                text: 'Back'
+                font_size: 40
+                on_press: root.current = 'gerenciador'
+                        
+
+            
 <Interface>:
-    orientation: 'vertical'
-    
-    Label:
-        id: action
-        text: 'Rock Paper Scissor'
-        font_size: 40
-    
-    Label:
-        id: lbl_points
-        text: ''
-        font_size: 30
-    
-    Button:
-        text: 'Rock'
-        font_size: 30
-        on_press: root.Rock()
+    BoxLayout:
+        orientation: 'vertical'
+        
+        Label:
+            id: action
+            text: 'Rock Paper Scissor'
+            font_size: 40
+        
+        Label:
+            id: lbl_points
+            text: ''
+            font_size: 30
+        
+        Button:
+            text: 'Rock'
+            font_size: 30
+            on_press: root.Rock()
 
-    Button:
-        text: 'Paper'
-        font_size: 30
-        on_press: root.Paper()
-    
-    Button:
-        text: 'Scissor'
-        font_size: 30
-        on_press: root.Scissor()
+        Button:
+            text: 'Paper'
+            font_size: 30
+            on_press: root.Paper()
+        
+        Button:
+            text: 'Scissor'
+            font_size: 30
+            on_press: root.Scissor()
 
-    Button:
-        id: btn_points
-        text: 'Points'
-        font_size: 30
-        on_press: root.Points()
+        Button:
+            id: btn_points
+            text: 'Points'
+            font_size: 30
+            on_press: root.Points()
