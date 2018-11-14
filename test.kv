@@ -1,12 +1,13 @@
 <Interface>:
     orientation: 'vertical'
+    
     Label:
-        id: acao
+        id: action
         text: 'Pedra Papel e Tesoura'
         font_size: 30
     
     Label:
-        id: pontuacao
+        id: lbl_points
         text: ''
         font_size: 30
     
@@ -24,3 +25,9 @@
         text: 'Scissor'
         font_size: 30
         on_press: root.Scissor()
+
+    Button:
+        id: btn_points
+        text: 'Points'
+        font_size: 30
+        on_press: root.Points()
