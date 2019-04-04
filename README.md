@@ -9,7 +9,6 @@ $ pip install kivy --user
 
 ## Runing
 
-To run this game, you can download the apk and run into your smartphone  
-or to run in your pc, just go to the diretory of the game and run
+Download the apk or
 
 $ python3 main.py
