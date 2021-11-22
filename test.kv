@@ -16,6 +16,46 @@
     
     Interface:
         name: 'interface'
+        BoxLayout:
+            orientation: 'vertical'
+            
+            Label:
+                id: action
+                text: 'Rock Paper Scissor'
+                font_size: 40
+            
+            Label:
+                id: lbl_points
+                text: ''
+                font_size: 30
+            
+            Button:
+                text: 'Rock'
+                font_size: 30
+                on_press: root.Rock()
+    
+            Button:
+                text: 'Paper'
+                font_size: 30
+                on_press: root.Paper()
+            
+            Button:
+                text: 'Scissor'
+                font_size: 30
+                on_press: root.Scissor()
+    
+            Button:
+                id: btn_points
+                text: 'Points'
+                font_size: 30
+                on_press: root.Points()
+                
+            Button: 
+                id: go_out
+                text: 'Back'
+                font_size: 30
+                on_press: root.current = 'gerenciador'
+
     
     Credits:
         name: 'credits'
@@ -49,37 +89,3 @@
                         
 
             
-<Interface>:
-    BoxLayout:
-        orientation: 'vertical'
-        
-        Label:
-            id: action
-            text: 'Rock Paper Scissor'
-            font_size: 40
-        
-        Label:
-            id: lbl_points
-            text: ''
-            font_size: 30
-        
-        Button:
-            text: 'Rock'
-            font_size: 30
-            on_press: root.Rock()
-
-        Button:
-            text: 'Paper'
-            font_size: 30
-            on_press: root.Paper()
-        
-        Button:
-            text: 'Scissor'
-            font_size: 30
-            on_press: root.Scissor()
-
-        Button:
-            id: btn_points
-            text: 'Points'
-            font_size: 30
-            on_press: root.Points()
